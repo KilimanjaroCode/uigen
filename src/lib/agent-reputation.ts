@@ -1,11 +1,14 @@
 import { prisma } from "@/lib/prisma";
 import { processGovernanceEvent } from "@/lib/governance/rule-engine";
 
-// Seed scores matching AGENT_REPUTATION in critique-artifact.ts (kept local to avoid circular import)
-const REPUTATION_SEED: Record<string, number> = {
+/** Seed reputation scores used to weight critique priority. Range: 0–1.
+ *  Single definition (previously duplicated in critique-artifact.ts, which as a
+ *  "use server" file could not export it). */
+export const AGENT_REPUTATION: Record<string, number> = {
   Claude: 0.9,
   Grok: 0.85,
 };
+const REPUTATION_SEED = AGENT_REPUTATION;
 
 const DEFAULT_REPUTATION = 0.7;
 

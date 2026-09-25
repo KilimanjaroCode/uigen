@@ -2,11 +2,7 @@
 
 import { getSession } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
-
-// ── Constants ─────────────────────────────────────────────────────────────────
-
-export const AUTO_PUBLISH_THRESHOLD = 0.8;
-export const REVIEWER_THRESHOLD    = 0.4;
+import { AUTO_PUBLISH_THRESHOLD, REVIEWER_THRESHOLD } from "@/lib/agent-roles";
 
 export type AgentRoleType = "AUTO_PUBLISH" | "REVIEWER" | "RESTRICTED";
 

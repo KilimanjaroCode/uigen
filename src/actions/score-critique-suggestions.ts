@@ -3,6 +3,7 @@
 import { getSession } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { walkVirtualFS, extractStyleSignature } from "@/lib/artifact-introspection";
+import { AUTO_SELECT_THRESHOLD } from "@/lib/critique-selection";
 import type { WeightedSuggestion } from "./coordinate-critiques";
 
 // ── Types ─────────────────────────────────────────────────────────────────────
@@ -34,8 +35,6 @@ const A11Y_TERMS = new Set([
   "tab",
 ]);
 
-/** Suggestions above this threshold are auto-selectable. */
-export const AUTO_SELECT_THRESHOLD = 0.65;
 
 // ── Scoring helpers ───────────────────────────────────────────────────────────
 

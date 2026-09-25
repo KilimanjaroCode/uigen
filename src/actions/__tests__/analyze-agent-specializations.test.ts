@@ -16,7 +16,8 @@ vi.mock("@/lib/prisma", () => ({
 
 const { getSession } = await import("@/lib/auth");
 const { prisma } = await import("@/lib/prisma");
-const { analyzeAgentSpecializations, classifySuggestion } = await import("../analyze-agent-specializations");
+const { analyzeAgentSpecializations } = await import("../analyze-agent-specializations");
+const { classifySuggestion } = await import("@/lib/agent-specialization");
 
 // ── Setup ─────────────────────────────────────────────────────────────────────
 

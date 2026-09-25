@@ -9,8 +9,8 @@ import { coordinateCritiques, type MergedCritique, type WeightedSuggestion } fro
 import {
   scoreCritiqueSuggestions,
   type ScoredSuggestion,
-  AUTO_SELECT_THRESHOLD,
 } from "@/actions/score-critique-suggestions";
+import { AUTO_SELECT_THRESHOLD } from "@/lib/critique-selection";
 import {
   getIKhayaManceNarrative,
   type GetIKhayaManceNarrativeInput,

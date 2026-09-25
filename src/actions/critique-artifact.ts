@@ -45,12 +45,6 @@ const GROK_DEFAULT_CRITIQUE = {
 
 // ── Agent reputation stubs ────────────────────────────────────────────────────
 
-/** Reputation scores used to weight critique priority. Range: 0–1. */
-export const AGENT_REPUTATION: Record<string, number> = {
-  Claude: 0.9,
-  Grok: 0.85,
-};
-
 /** Fallback reputation for unknown agents. */
 const DEFAULT_REPUTATION = 0.7;
 
