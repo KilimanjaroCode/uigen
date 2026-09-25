@@ -16,7 +16,8 @@ vi.mock("@/lib/prisma", () => ({
 
 const { getSession } = await import("@/lib/auth");
 const { prisma } = await import("@/lib/prisma");
-const { assignAgentRoles, AUTO_PUBLISH_THRESHOLD, REVIEWER_THRESHOLD } = await import("../assign-agent-roles");
+const { assignAgentRoles } = await import("../assign-agent-roles");
+const { AUTO_PUBLISH_THRESHOLD, REVIEWER_THRESHOLD } = await import("@/lib/agent-roles");
 
 // ── Setup ─────────────────────────────────────────────────────────────────────
 

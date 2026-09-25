@@ -1,7 +1,7 @@
 "use server";
 
 import { prisma } from "@/lib/prisma";
-import { classifySuggestion, type SkillCategory } from "./analyze-agent-specializations";
+import { classifySuggestion, type SkillCategory } from "@/lib/agent-specialization";
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 

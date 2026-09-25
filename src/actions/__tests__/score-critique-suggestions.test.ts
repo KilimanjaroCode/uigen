@@ -17,9 +17,10 @@ vi.mock("@/lib/prisma", () => ({
 
 const { getSession } = await import("@/lib/auth");
 const { prisma } = await import("@/lib/prisma");
-const { scoreCritiqueSuggestions, AUTO_SELECT_THRESHOLD } = await import(
+const { scoreCritiqueSuggestions } = await import(
   "../score-critique-suggestions"
 );
+const { AUTO_SELECT_THRESHOLD } = await import("@/lib/critique-selection");
 
 // ── Fixtures ──────────────────────────────────────────────────────────────────
 

@@ -378,7 +378,7 @@ describe("critiqueArtifact (multi-agent mode)", () => {
 
 // ── Ranking & scoring heuristics ───────────────────────────────────────────────
 
-const { AGENT_REPUTATION } = await import("../critique-artifact");
+const { AGENT_REPUTATION } = await import("@/lib/agent-reputation");
 
 describe("critiqueArtifact (ranking heuristics)", () => {
   it("attaches finalScore to each AggregatedCritique", async () => {
