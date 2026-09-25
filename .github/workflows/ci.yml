@@ -8,7 +8,7 @@ on:
 
 jobs:
   ci:
-    name: Lint · Type-check · Test
+    name: Lint · Type-check · Test · Build
     runs-on: ubuntu-latest
 
     steps:
@@ -33,3 +33,11 @@ jobs:
 
       - name: Test
         run: npm test -- --run
+
+      # The production build is what deploys. Tests and tsc passed while `next build`
+      # failed (non-async exports in "use server" files), so CI must build too.
+      - name: Build
+        run: npm run build
+        env:
+          # Throwaway value: satisfies the production guard during the build only.
+          JWT_SECRET: ci-build-only-not-a-real-secret
